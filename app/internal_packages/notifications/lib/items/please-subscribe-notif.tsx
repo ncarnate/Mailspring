@@ -33,12 +33,13 @@ export default class PleaseSubscribeNotification extends React.Component<
     const accountCount = AccountStore.accounts().length;
 
     let msg = null;
-    if (stripePlan === 'Basic' && accountCount > 4) {
-      msg = localized(`Please consider paying for Mailspring Pro!`);
-    }
-    if (stripePlan !== stripePlanEffective) {
-      msg = localized(`We're having trouble billing your Mailspring subscription.`);
-    }
+    // D4
+    // if (stripePlan === 'Basic' && accountCount > 4) {
+    //   msg = localized(`Please consider paying for Mailspring Pro!`);
+    // }
+    // if (stripePlan !== stripePlanEffective) {
+    //   msg = localized(`We're having trouble billing your Mailspring subscription.`);
+    // }
 
     return { msg };
   }

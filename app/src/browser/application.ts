@@ -26,6 +26,8 @@ import { registerQuickpreviewIPCHandlers } from './quickpreview-ipc';
 
 let clipboard = null;
 
+console.log("App....")
+
 // The application's singleton class.
 //
 export default class Application extends EventEmitter {
@@ -52,6 +54,7 @@ export default class Application extends EventEmitter {
   _resettingAndRelaunching: boolean;
 
   async start(options) {
+    console.log("START")
     const { resourcePath, configDirPath, version, devMode, specMode, safeMode } = options;
 
     initializeLocalization({ configDirPath });

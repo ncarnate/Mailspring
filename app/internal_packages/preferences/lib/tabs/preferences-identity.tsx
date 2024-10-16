@@ -286,16 +286,17 @@ class PreferencesIdentity extends React.Component<
     const { identity } = this.state;
     const stripePlan = identity ? identity.stripePlan : null;
 
+    // D4
     return (
       <div className="container-identity">
         <div className="identity-content-box">
           {identity && <IdentitySummary identity={identity} />}
 
-          {!stripePlan
+          {this._renderPaidPlan('pro', 'pro') /* NOTE:D4 {!stripePlan
             ? this._renderNoIdentity()
             : stripePlan === 'Basic'
             ? this._renderBasicPlan()
-            : this._renderPaidPlan(stripePlan, identity.stripePlanEffective)}
+            : this._renderPaidPlan(stripePlan, identity.stripePlanEffective)} */}
         </div>
       </div>
     );

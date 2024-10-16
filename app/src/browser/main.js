@@ -19,6 +19,12 @@ console.inspect = function consoleInspect(val) {
 };
 
 const { app, session } = require('electron');
+
+// D4
+// app.commandLine.appendSwitch("disable-gpu");
+// app.disableHardwareAcceleration();
+// app.commandLine.appendSwitch("disable-software-rasterizer");
+
 const path = require('path');
 const mkdirp = require('mkdirp');
 

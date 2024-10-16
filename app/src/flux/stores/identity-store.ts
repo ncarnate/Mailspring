@@ -83,7 +83,9 @@ class _IdentityStore extends MailspringStore {
   }
 
   hasProFeatures() {
-    return this._identity && this._identity.stripePlanEffective !== 'Basic';
+    // D4
+    return true;
+    // return this._identity && this._identity.stripePlanEffective !== 'Basic';
   }
 
   _fetchAndPollRemoteIdentity() {

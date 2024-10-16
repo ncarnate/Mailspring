@@ -82,6 +82,7 @@ export const LocalizedErrorStrings = {
   ),
 };
 
+console.log("~~~~~~~~~~~~~ MailsyncProcess ~~~~~~~~~~~~~")
 export class MailsyncProcess extends EventEmitter {
   _proc: ChildProcess = null;
   _win = null;
@@ -152,6 +153,7 @@ export class MailsyncProcess extends EventEmitter {
   }
 
   _spawnProcess(mode) {
+    console.log("~~~~~~~~~~~~~ spawn ~~~~~~~~~~~~~")
     const env = {
       CONFIG_DIR_PATH: this.configDirPath,
       GMAIL_CLIENT_ID: GMAIL_CLIENT_ID,
@@ -265,6 +267,7 @@ export class MailsyncProcess extends EventEmitter {
   }
 
   sync() {
+    console.log("~~~~~~~~~~~~~ sync ~~~~~~~~~~~~~")
     this._spawnProcess('sync');
     let outBuffer = '';
     let errBuffer = null;
@@ -336,6 +339,8 @@ export class MailsyncProcess extends EventEmitter {
   }
 
   sendMessage(json) {
+    console.log("~~~~~~~~~~~~~ sendMessage ~~~~~~~~~~~~~")
+    console.log(json)
     if (!Utils) {
       Utils = require('mailspring-exports').Utils;
     }
